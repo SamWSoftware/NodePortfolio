@@ -20,7 +20,7 @@ export default class Article extends Component {
   componentDidMount() {
     axios
       .get(
-        "http://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts/" +
+        "https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts/" +
           this.props.match.params.id
       )
       .then(res => {
