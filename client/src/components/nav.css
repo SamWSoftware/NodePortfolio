@@ -1,0 +1,20 @@
+:root{
+  --p500: #5C6BC0;
+  --p700: #303f9f;
+  --p800: #283593;
+  --a700: #FFC400;
+}
+
+.navbar {
+  background-color: var(--p800);
+  color: white;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: baseline;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.18), 0 10px 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 2
+}
