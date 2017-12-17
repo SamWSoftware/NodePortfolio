@@ -24,7 +24,8 @@ export default class Blog extends Component {
 
   render() {
     return (
-      <div className="blog" id="blog">
+      <div className="blog">
+        <div className="anchor" id="blog" />
         <h1 className="sectionTitle">Articles</h1>
         {this.state.posts.map(post => <ArticlePreview post={post} />)}
       </div>
