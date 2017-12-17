@@ -13,7 +13,7 @@ export default class Blog extends Component {
   componentDidMount() {
     axios
       .get(
-        "http://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"
+        "https://public-api.wordpress.com/rest/v1/sites/samwcoding.wordpress.com/posts"
       )
       .then(res => {
         console.log(res.data.posts);
