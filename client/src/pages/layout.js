@@ -1,5 +1,6 @@
 import React from "react";
 import { BrowserRouter, Route } from "react-router-dom";
+import ReactGA from "react-ga";
 
 import Nav from "../components/nav";
 import About from "./about";
@@ -9,6 +10,11 @@ import Blog from "./blog";
 import Article from "../components/article";
 
 export default class Layout extends React.Component {
+  constructor() {
+    super();
+    ReactGA.initialize("UA-111422776-1");
+    ReactGA.pageview(window.location.pathname);
+  }
   render() {
     const main = () => (
       <div>
