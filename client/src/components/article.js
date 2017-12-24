@@ -24,13 +24,24 @@ export default class Article extends Component {
           this.props.match.params.id
       )
       .then(res => {
-        console.log(res);
-
         this.setState({ post: res.data });
-        console.log(this.state.posts);
+        const container = document.querySelector(".content");
+        let scr = container.querySelectorAll("script");
+        scr.forEach(node => {
+          let parent = node.parentElement;
+          let d = document.createElement("script");
+          d.async = node.async;
+          d.src = node.src;
+          d.type = "text/javascript";
+          parent.insertBefore(d, node);
+          parent.removeChild(node);
+          d.onload = console.log(d);
+        });
       })
       .catch(error => console.log(error));
   }
+
+  parseOutScripts(content) {}
 
   render() {
     if (this.state.post) {
